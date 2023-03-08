@@ -75,3 +75,4 @@ def run_installer(installer_path):
 
 if __name__ == '__main__':
     main()
+while bye()
