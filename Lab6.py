@@ -1,5 +1,5 @@
-import requests
 import hashlib
+import requests
 import os
 import sys
 
@@ -29,7 +29,7 @@ def main():
         run_installer(installer_path)
 
         # Delete the VLC installer from disk
-  #      delete_installer(installer_path)
+        delete_installer(installer_path)
 
 def get_latest_version():
     url = 'http://download.videolan.org/pub/videolan/vlc/'
@@ -70,8 +70,8 @@ def save_installer(installer_data):
 def run_installer(installer_path):
     os.system(f'start /wait {installer_path} /S')
 
-#def delete_installer(installer_path):
- #   os.remove(installer_path)
+def delete_installer(installer_path):
+    os.remove(installer_path)
 
 if __name__ == '__main__':
     main()
